@@ -1,4 +1,16 @@
-douban-photoalbum-downloader
-============================
+豆瓣相册下载器
+============
 
-Download one Douban photo album
+
+下载豆瓣相册
+
+##使用:
+
+	# 使用-a来指定相册id, -p来指定想存的目标地址
+	# 例如下载 http://www.douban.com/photos/album/76149639/ 存到/tmp/pos
+    python dpd.py -a "76149639" -p "/tmp/pos"
+
+##注意:
+
+* 本来使用了100并发无间隔请求，很快就会被屏掉，所以现在单线程1秒的间隔，会慢点，请耐心等待
+* 只为提供相册下载方便使用，不要做不正当使用，大家要呵护豆瓣的服务器呀
