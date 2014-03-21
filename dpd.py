@@ -18,6 +18,7 @@ import cookielib
 # import gevent
 
 
+# handler=urllib2.HTTPHandler(debuglevel=1)
 redirect_handler = urllib2.HTTPRedirectHandler()
 cookie_jar = cookielib.CookieJar()
 # Set cookie part
@@ -36,7 +37,7 @@ cookie_handler = urllib2.HTTPCookieProcessor(cookie_jar)
 opener = urllib2.build_opener(redirect_handler, cookie_handler)
 headers = [('User-Agent', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/32.0.1700.107 Safari/537.36')]
 opener.addheaders = headers
-opener.addheaders.append(('Cookie', cookie))
+# opener.addheaders.append(('Cookie', cookie))
 urllib2.install_opener(opener)
 
 
